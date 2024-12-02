@@ -9,33 +9,59 @@
 # @author Igor Teplostanski <igor@teplostanski.dev>
 # @maintainer Igor Teplostanski <igor@teplostanski.dev>
 
-# Function to colorize the path and replace home directory with ~
-custom_prompt_path() {
-  local full_path="$PWD"
+# Resolve the current path with special handling for root and home directories
+process_path() {
+  local full_path="$1"
 
-  # Check if the path is the home directory
-  if [[ "$full_path" == "$HOME" ]]; then
-    echo "%F{blue}~%f"
+  # Root directory: no further processing needed
+  if [[ "$full_path" == "/" ]]; then
+    echo "/"
     return
   fi
 
-  # Replace the home directory with ~ for all paths except the root home directory
-  local home_replaced="$full_path"
-  if [[ "$full_path" == $HOME/* ]]; then
-    home_replaced="~${full_path#$HOME}"
+  # Home directory: show as ~
+  if [[ "$full_path" == "$HOME" ]]; then
+    echo "~"
+    return
   fi
 
-  # Split the path into base name and parent directory
-  local base_name="${home_replaced##*/}"  # Last part of the path (current directory)
-  local parent_path="${home_replaced%/*}"  # Everything before the last part of the path
+  # Paths under home: replace $HOME with ~
+  if [[ "$full_path" == "$HOME/"* ]]; then
+    echo "~${full_path#$HOME}"
+    return
+  fi
 
-  # If the parent path is empty, only show the base name
-  if [[ -z "$parent_path" ]]; then
-    echo "%F{blue}${base_name}%f"
+  # Ensure absolute paths retain the leading slash
+  if [[ "$full_path" == /* ]]; then
+    echo "$full_path"
+    return
+  fi
+}
+
+# Apply color highlighting to the processed path
+colorize_path() {
+  local processed_path="$1"
+
+  # Split the path into parent (tail) and current directory
+  local current_dir="${processed_path##*/}"
+  local parent_path="${processed_path%/*}"
+
+  # Special cases: root and home directories
+  if [[ "$processed_path" == "/" ]]; then
+    echo "%F{blue}/%f"
+  elif [[ "$processed_path" == "~" ]]; then
+    echo "%F{blue}~%f"
   else
-    # Show the full path with the home directory replaced by ~
-    echo "%F{white}${parent_path}/%F{blue}${base_name}%f"
+    # General case: parent is white, current directory is blue
+    echo "%F{white}${parent_path}/%F{blue}${current_dir}%f"
   fi
+}
+
+# Generate the custom prompt path with colors
+custom_prompt_path() {
+  local processed_path
+  processed_path="$(process_path "$PWD")"
+  colorize_path "$processed_path"
 }
 
 PS1='$(custom_prompt_path)$(git_prompt_info) %F{magenta}%(!.#.>)%f '
