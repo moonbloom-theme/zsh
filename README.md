@@ -16,6 +16,21 @@
 ## Install
 See [INSTALL.md](./INSTALL.md)
 
+## Team
+
+This theme is maintained by the following person(s) and a bunch of [awesome contributors](https://github.com/moonbloom-theme/zsh/graphs/contributors).
+
+<!--CONTRIBUTORS_TABLE--><table><tr>
+  <td align="center">
+    <a href="https://github.com/teplostanski" title="Игорь Теплостанский">
+      <img src="https://avatars.githubusercontent.com/u/56846024?v=4" width="42;" alt="Игорь Теплостанский"/>
+    <br /><sub><b>Игорь Теплостанский</b></sub>
+    </a>
+  </td>
+</tr></table><!--CONTRIBUTORS_TABLE-END-->
+
+</br>
+
 <p align="center">
   <img alt="GitHub License" src="https://img.shields.io/github/license/moonbloom-theme/zsh?style=flat-square&labelColor=%231e1f27&color=%23E8C87E">
   <img alt="GitHub Release" src="https://img.shields.io/github/v/release/moonbloom-theme/zsh?include_prereleases&display_name=release&style=flat-square&labelColor=%231e1f27&color=%23E8C87E">

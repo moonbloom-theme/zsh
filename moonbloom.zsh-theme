@@ -1,4 +1,4 @@
-# Moonbloom Theme v1.0.0
+# Moonbloom theme for Zsh
 #
 # Github: https://github.com/moonbloom-theme/zsh
 # Website: https://moonbloom.teplostanski.dev
