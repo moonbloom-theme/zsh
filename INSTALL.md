@@ -21,3 +21,6 @@ curl -s -f https://raw.githubusercontent.com/moonbloom-theme/zsh/main/moonbloom.
 ### Activating theme
 
 Go to your `~/.zshrc` file and set `ZSH_THEME="moonbloom"`.
+
+## Config
+See [CONFIG.md](./CONFIG.md)
