@@ -1,20 +1,24 @@
 <div align="center">
   <h1>Moonbloom for <a href="https://zsh.org/">Zsh</a></h1>
+  <p>Minimalistic, configurable, and thoughtfully designed Zsh theme for productive work.</p>
   <p>Gentle on the eyes, evoking the cozy tranquility of a serene night.</p>
-  <span><a href="https://github.com/moonbloom-theme/moonbloom">Homepage</a> • <a href="https://moonbloom.teplostanski.dev">Website</a> • <a href="https://github.com/orgs/moonbloom-theme/discussions">Discussions</a> • <a href="https://donate.teplostanski.dev">Support Us</a></span>
+  <span><a href="https://github.com/moonbloom-theme/moonbloom">Homepage</a> • <a href="https://moonbloom.teplostan.ski">Website</a> • <a href="https://github.com/orgs/moonbloom-theme/discussions">Discussions</a> • <a href="https://donate.teplostan.ski">Support Us</a></span>
 </div>
 
 <br/>
 
 > The [Z shell (Zsh)](https://zsh.org/) is a Unix shell that can be used as an interactive login shell and as a command interpreter for shell scripting. Zsh is an extended Bourne shell with many improvements, including some features of Bash, ksh, and tcsh.
 
-<img width="720px" src="./screen.png">
+<img width="720px" src="./assets/screen.png">
 
 > [!NOTE]
 > This repository contains a Zsh theme that adapts to the color scheme of your terminal emulator.
 
 ## Install
 See [INSTALL.md](./INSTALL.md)
+
+## Config
+See [CONFIG.md](./CONFIG.md)
 
 ## Team
 
