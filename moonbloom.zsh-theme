@@ -157,6 +157,9 @@ validate_config_value HG_PROMPT_ASTERISK_COLOR "$_hg_prompt_asterisk_color" is_v
 validate_config_value VIRTUALENV_COLOR "$_virtualenv_color" is_valid_color
 validate_config_value RIGHT_PROMPT_COLOR "$_right_prompt_color" is_valid_color
 validate_config_value SHOW_SSH_INDICATOR "$_show_ssh_indicator" is_valid_boolean
+validate_config_value SHOW_USERNAME "$_show_username" is_valid_boolean
+validate_config_value SHOW_HOST "$_show_host" is_valid_boolean
+validate_config_value SHOW_REMOTE_SERVER_IP "$_show_remote_server_ip" is_valid_boolean
 # End Validation
 
 get_connection_prefix() {
