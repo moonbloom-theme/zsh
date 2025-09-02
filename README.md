@@ -2,7 +2,11 @@
   <h1>Moonbloom for <a href="https://zsh.org/">Zsh</a></h1>
   <p>Minimalistic, configurable, and thoughtfully designed Zsh theme for productive work.</p>
   <p>Gentle on the eyes, evoking the cozy tranquility of a serene night.</p>
-  <span><a href="https://github.com/moonbloom-theme/moonbloom">homepage</a> · <a href="https://moonbloom.teplostan.ski">website</a> · <a href="https://github.com/orgs/moonbloom-theme/discussions">discussions</a> · <a href="https://donate.teplostan.ski">support us</a></span>
+  <p>
+    <samp>
+      <a href="https://github.com/moonbloom-theme/moonbloom">homepage</a> · <a href="https://moonbloom.teplostan.ski">website</a> · <a href="https://github.com/orgs/moonbloom-theme/discussions">discussions</a> · <a href="https://donate.teplostan.ski">support us</a>
+    </samp>
+  </p>
 </div>
 
 <br/>
